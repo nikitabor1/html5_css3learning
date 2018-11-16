@@ -2,21 +2,32 @@
     padding: 0;
     margin: 0;
     border: 0;
-
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
 
 html,
 body {
     min-height: 100%;
     min-width: 100%;
+    /**max-width: 1280px;**/
     background: #ffffff;
     position: relative;
-    font-family: "Arial"sans-serif;
+    font-family: "Arial", sans-serif;
 }
 
+.conteiner {
+    max-width: 1280px;
+}
+
+
 header {
-    min-height: 323px;
     background: #445162;
     display: flex;
     justify-content: space-between;
@@ -24,8 +35,7 @@ header {
 }
 
 .headtextlist {
-    width: 50%;
-    height: 69%;
+    max-width: 458px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,11 +72,11 @@ header {
 }
 
 main {
-    padding-bottom: 50px;
+    padding-bottom: 26px;
 }
 
 .aboutprod {
-    min-height: 343px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,17 +100,14 @@ main {
     font-weight: 400;
     line-height: 24px;
     text-align: justify;
-
 }
 
 .abouttext {
     display: flex;
     flex-direction: column;
-    margin: 50px 50px 50px 50px;
-    width: 55%;
+    margin: 50px 0px 50px 50px;
     max-width: 653px;
     justify-content: space-between;
-
 }
 
 
@@ -113,21 +120,21 @@ main {
     align-items: center;
 }
 
-.digplus {
+.digpluscontainer {
     min-height: 415px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows:
-        /**20% 20% 20% 20%**/
-        30px auto;
-    grid-gap: 35px;
     background: #f5f5f5;
-    padding: 50px 50px 50px 50px;
 }
 
-.digplus h2 {
-    grid-column: 1/3;
-    grid-row: 1;
+.digplus {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 576px));
+    grid-auto-flow: row;
+    grid-gap: 27px;
+    padding: 30px 50px 50px 50px;
+    justify-content: center;
+}
+
+.digpluscontainer h2 {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -136,19 +143,18 @@ main {
     font-size: 30px;
     font-weight: 400;
     line-height: 30px;
+    padding-top: 50px;
 }
 
 .digplus .pluses {
     display: flex;
     align-items: flex-start;
-    align-self: center;
-    justify-self: center;
 }
 
 .digplus .pluses img {
     align-self: auto;
     margin-right: 9px;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 
 .digplus .pluses p {
@@ -156,27 +162,17 @@ main {
     font-family: "Arial";
     font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
-    max-width: 526px;
+    line-height: 21px;
+    /**max-width: 526px;**/
     text-align: justify;
 }
 
-.scrinshots {
-    min-height: 487px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows:30px auto;
-    grid-gap: 35px;
+.scrnshcontainer {
     background: #ffffff;
-    padding: 50px 50px 50px 50px;
-    justify-content: center;
-
-
 }
 
-.scrinshots h2 {
-    grid-column: 1/3;
-    grid-row: 1;
+.scrnshcontainer h2 {
+
     display: flex;
     justify-content: center;
     color: #445161;
@@ -184,20 +180,27 @@ main {
     font-size: 30px;
     font-weight: 400;
     line-height: 36px;
+    padding-top: 50px;
+}
+
+.scrinshots {
+    display: grid;
+    grid-gap: 28px;
+    padding: 50px 50px 50px 50px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 576px));
+    grid-auto-flow: row;
+
 }
 
 .scrsh {
     display: flex;
-    max-width: 574px;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-self: center;
-    justify-self: center;
+    /**max-width: 574px;**/
+    align-items: flex-start;
+
 }
 
-.scrsh figure {
+.scrsh img {
     margin-right: 15px;
 }
 
@@ -205,7 +208,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 150px;
 }
 
 .scrsh .textscrblc h3 {
@@ -213,8 +215,8 @@ main {
     font-family: "Arial";
     font-size: 24px;
     font-weight: 400;
-    line-height: 24px;
-    margin-bottom: 15px;
+    line-height: 30px;
+    margin-bottom: 12px;
 }
 
 .scrsh .textscrblc p {
@@ -222,19 +224,321 @@ main {
     font-family: "Arial";
     font-size: 16px;
     font-weight: 400;
+    line-height: 22px;
+}
+
+.reviewscontainer {
+    background: #f5f5f5;
+}
+
+.reviewscontainer h2 {
+    color: #445161;
+    font-family: "Arial";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.reviewsgrid {
+    display: grid;
+    grid-gap: 24px;
+    padding: 50px 50px 50px 50px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 574px));
+    grid-auto-flow: row;
+}
+
+.reviews {
+    display: flex;
+}
+
+.reviews img {
+    width: 75px;
+    height: 75px;
+    margin-right: 28px;
+}
+
+blockquote {
+    background: #ebebeb;
+    position: relative;
+    padding: 16px;
+}
+
+blockquote::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    top: 27px;
+    left: -12px;
+    background: #ebebeb;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+blockquote p {
+    color: #333333;
+    font-family: "Arial";
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+blockquote footer {
+    color: #989898;
+    font-family: "Arial";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.buyitcontainer {
+    background: #ffffff;
+}
+
+.buyitcontainer h2 {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 30px 0;
+}
+
+.buyitvariants {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.standart,
+.premium,
+.lux {
+    width: 300px;
+    background: #445162;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #445162;
+    border-radius: 5px;
+    margin: 0 45px 45px 45px;
+}
+
+.standart h3,
+.premium h3,
+.lux h3 {
+    color: #ffffff;
+    font-family: "Arial";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 17px 0;
+}
+
+.standart h1,
+.premium h1,
+.lux h1 {
+    color: #445162;
+    font-family: "Arial";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 71px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.standart ol,
+.premium ol,
+.lux ol {
+    margin: 0;
+}
+
+.standart ol li,
+.premium ol li,
+.lux ol li {
+    color: #ffffff;
+    font-family: "Arial";
+    font-size: 14px;
+    font-weight: 400;
     line-height: 24px;
-    max-width: 359px;
+}
+
+.buybut {
+    width: 260px;
+    height: 40px;
+    background-color: #ffffff;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: #445161;
+    font-family: "Arial";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.contform {
+    background: #445162;
+
+}
+
+.contform h2 {
+    color: #ffffff;
+    font-family: "Arial";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 30px 0;
+    margin: 0;
+}
+
+.formncontlinks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fieldsetform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+
+}
+
+.forsubmit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fieldsetform input {
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-left: 10px;
+
+}
+
+.fieldsetform textarea {
+    width: 100%;
+    height: 170px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 13px;
+}
+
+input[type="submit"] {
+    width: 140px;
+    height: 40px;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #445162;
+    font-family: "Arial";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.contlinks {
+    margin-left: 45px;
+}
+
+.contlinks p {
+    color: #ffffff;
+    font-family: "Arial";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+}
+
+.contact {
+    margin-bottom: 29px;
+    width: 240px;
+    display: flex;
+    align-items: center;
+}
+
+#contact1::before {
+    content: url(skype_icon.png);
+    width: 26px;
+    height: 26px;
+    margin-right: 5px;
+}
+
+#contact2::before {
+    content: url(icq_icon.png);
+    width: 26px;
+    height: 26px;
+    margin-right: 5px;
+}
+
+#contact3::before {
+    content: url(email_icon.png);
+        width: 26px;
+    height: 26px;
+    margin-right: 5px;
+}
+
+#contact4::before {
+    content: url(phone_icon.png);
+        width: 26px;
+    height: 26px;
+    margin-right: 5px;
+}
+
+.soclinks{
+    padding-bottom: 20px;
 }
 
 
 
 
 
-footer {
-    height: 26px;
+
+
+.mainfooter {
+    min-height: 26px;
     background: #f5f5f5;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%
+    width: 100%;
+    color: #445162;
+    font-family: "Arial MT";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
