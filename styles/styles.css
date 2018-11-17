@@ -8,24 +8,28 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: none;
-}
+a:hover {text-decoration: none;}
 
 html,
 body {
     min-height: 100%;
-    min-width: 100%;
-    /**max-width: 1280px;**/
     background: #ffffff;
     position: relative;
     font-family: "Arial", sans-serif;
+    max-width: 1280px;
+    margin:auto;
 }
+
+body{
+    
+}
+
+
 
 .conteiner {
-    max-width: 1280px;
-}
+    /**max-width: 1280px;**/
 
+}
 
 header {
     background: #445162;
@@ -83,7 +87,6 @@ main {
     flex-wrap: wrap;
 }
 
-
 .abouttext h2 {
     color: #445161;
     font-family: "Arial";
@@ -109,7 +112,6 @@ main {
     max-width: 653px;
     justify-content: space-between;
 }
-
 
 .aboutimg {
     width: 430px;
@@ -163,7 +165,6 @@ main {
     font-size: 16px;
     font-weight: 400;
     line-height: 21px;
-    /**max-width: 526px;**/
     text-align: justify;
 }
 
@@ -172,7 +173,6 @@ main {
 }
 
 .scrnshcontainer h2 {
-
     display: flex;
     justify-content: center;
     color: #445161;
@@ -190,14 +190,11 @@ main {
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(200px, 576px));
     grid-auto-flow: row;
-
 }
 
 .scrsh {
     display: flex;
-    /**max-width: 574px;**/
     align-items: flex-start;
-
 }
 
 .scrsh img {
@@ -390,7 +387,6 @@ blockquote footer {
 
 .contform {
     background: #445162;
-
 }
 
 .contform h2 {
@@ -417,7 +413,6 @@ blockquote footer {
     align-items: center;
     justify-content: center;
     width: 500px;
-
 }
 
 .forsubmit {
@@ -435,7 +430,6 @@ blockquote footer {
     border: 1px solid white;
     border-radius: 5px;
     padding-left: 10px;
-
 }
 
 .fieldsetform textarea {
@@ -503,27 +497,21 @@ input[type="submit"] {
 
 #contact3::before {
     content: url(email_icon.png);
-        width: 26px;
+    width: 26px;
     height: 26px;
     margin-right: 5px;
 }
 
 #contact4::before {
     content: url(phone_icon.png);
-        width: 26px;
+    width: 26px;
     height: 26px;
     margin-right: 5px;
 }
 
-.soclinks{
+.soclinks {
     padding-bottom: 20px;
 }
-
-
-
-
-
-
 
 .mainfooter {
     min-height: 26px;
