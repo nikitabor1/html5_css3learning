@@ -65,6 +65,8 @@ body {
     form {
         width: 39%;
     }
+    .headtextlist {
+        max-width: 38%;}
 }
 
 @media (max-width: 768px) {
@@ -105,6 +107,8 @@ body {
     form {
         width: 80%;
     }
+        .headtextlist {
+        max-width: 80%;}
 }
 
 @media (max-width: 576px) {
@@ -145,6 +149,8 @@ body {
     form {
         width: 80%;
     }
+        .headtextlist {
+        max-width: 80%;}
 }
 
 .container {
@@ -162,7 +168,8 @@ header {
 
 
 .headtextlist {
-    max-width: 458px;
+/*    max-width: 458px;*/
+/*    max-width: 38%;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -634,8 +641,7 @@ input[type="submit"] {
 
 #contact4::before {
     content: url(phone_icon.png);
-    width: 26px;
-    height: 26px;
+    width: 10%;
     margin-right: 5px;
 }
 
