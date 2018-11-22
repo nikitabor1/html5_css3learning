@@ -8,7 +8,9 @@ a {
     text-decoration: none;
 }
 
-a:hover {text-decoration: none;}
+a:hover {
+    text-decoration: none;
+}
 
 html,
 body {
@@ -16,19 +18,139 @@ body {
     background: #ffffff;
     position: relative;
     font-family: "Arial", sans-serif;
-    max-width: 1280px;
-    margin:auto;
+    font-weight: 400;
+    min-width: 100%;
+    /*    max-width: 100%;*/
+    margin: auto;
 }
 
-body{
-    
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1280px;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    #digplus,
+    #scrinshots,
+    #reviewsgrid {
+        grid-template-columns: repeat(auto-fit, 48%);
+    }
+
+    .abouttext {
+        width: 52%;
+    }
+
+    .aboutimg {
+        width: 30%;
+    }
+
+    html,
+    body {
+        font-size: 16px;
+        margin: auto;
+    }
+
+    #digplus .pluses img {
+        width: 10%;
+    }
+
+    .standart,
+    .premium,
+    .lux {
+        width: 24%;
+    }
+
+    form {
+        width: 39%;
+    }
 }
 
+@media (max-width: 768px) {
+    .container {
+        justify-content: center;
+    }
 
+    .abouttext {
+        width: 100%;
+    }
 
-.conteiner {
-    /**max-width: 1280px;**/
+    #digplus,
+    #scrinshots,
+    #reviewsgrid {
+        grid-template-columns: repeat(auto-fit, 100%);
+    }
 
+    .aboutimg {
+        width: 100%;
+    }
+
+    html,
+    body {
+        font-size: 14px;
+        margin: auto;
+    }
+
+    #digplus .pluses img {
+        width: 5%;
+    }
+
+    .standart,
+    .premium,
+    .lux {
+        width: 48%;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        justify-content: center;
+    }
+
+    .abouttext {
+        width: 100%;
+    }
+
+    #digplus,
+    #scrinshots,
+    #reviewsgrid {
+        grid-template-columns: repeat(auto-fit, 100%);
+    }
+
+    .aboutimg {
+        width: 100%;
+    }
+
+    html,
+    body {
+        font-size: 12px;
+        margin: auto;
+    }
+
+    #digplus .pluses img {
+        width: 3%;
+    }
+
+    .standart,
+    .premium,
+    .lux {
+        width: 70%;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header {
@@ -38,20 +160,19 @@ header {
     flex-wrap: wrap;
 }
 
+
 .headtextlist {
     max-width: 458px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 50px 50px 50px 50px;
+    margin: 4%;
 }
 
 .headtextlist h1 {
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
     color: #ffffff;
-    font-family: "Arial";
-    font-size: 60px;
-    font-weight: 400;
+    font-size: 3.75rem;
     line-height: 45px;
     margin: 0 0 50px 0;
 }
@@ -59,9 +180,7 @@ header {
 .headtextlist ul {
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
     color: #ffffff;
-    font-family: "Arial";
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 1.25rem;
     line-height: 36px;
     list-style-type: none;
     list-style-image: url(check_icon.png);
@@ -72,35 +191,26 @@ header {
     background-color: #ffffff;
     width: 469px;
     height: 214px;
-    margin: 50px 50px 50px 50px;
+    margin: 4%;
+    background-image: url(../img/trex.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 main {
-    padding-bottom: 26px;
-}
-
-.aboutprod {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    padding-bottom: 1.63rem;
 }
 
 .abouttext h2 {
     color: #445161;
-    font-family: "Arial";
-    font-size: 30px;
-    font-weight: 400;
+    font-size: 1.88rem;
     line-height: 36px;
     margin-bottom: 30px;
 }
 
 .abouttext p {
     color: #333333;
-    font-family: "Arial";
-    font-size: 16px;
-    font-weight: 400;
     line-height: 24px;
     text-align: justify;
 }
@@ -108,31 +218,43 @@ main {
 .abouttext {
     display: flex;
     flex-direction: column;
-    margin: 50px 0px 50px 50px;
-    max-width: 653px;
+    margin: 4% 0 4% 4%;
     justify-content: space-between;
 }
 
 .aboutimg {
-    width: 430px;
-    height: 245px;
+    /*width: 430px;
+    height: 245px;*/
+    /*    width: 30%;*/
     background-color: #445161;
-    margin: 50px 50px 50px 50px;
+    margin: 4%;
     display: flex;
     align-items: center;
 }
 
-.digpluscontainer {
-    min-height: 415px;
-    background: #f5f5f5;
+video {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
-.digplus {
+.digpluscontainer {
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+}
+
+#digplus {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 576px));
+    /*    grid-template-columns: repeat(auto-fit, minmax(100px, 576px));*/
+    /*    grid-template-columns: repeat(auto-fit, 48%);*/
+    /*    grid-template-columns: repeat(auto-fit, minmax(400px, 48%));*/
     grid-auto-flow: row;
-    grid-gap: 27px;
-    padding: 30px 50px 50px 50px;
+    gap: 1.69rem;
+    padding: 3%;
     justify-content: center;
 }
 
@@ -141,30 +263,25 @@ main {
     justify-content: center;
     align-items: flex-end;
     color: #445161;
-    font-family: "Arial MT";
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 30px;
-    padding-top: 50px;
+    font-size: 1.88rem;
+    line-height: 1.88rem;
+
 }
 
-.digplus .pluses {
+#digplus .pluses {
     display: flex;
     align-items: flex-start;
 }
 
-.digplus .pluses img {
-    align-self: auto;
-    margin-right: 9px;
-    margin-top: 4px;
+#digplus .pluses img {
+    margin-right: 1%;
+    margin-top: 0.5%;
+    display: flex;
 }
 
-.digplus .pluses p {
+#digplus .pluses p {
     color: #333333;
-    font-family: "Arial";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 21px;
+    line-height: 1.32rem;
     text-align: justify;
 }
 
@@ -176,29 +293,27 @@ main {
     display: flex;
     justify-content: center;
     color: #445161;
-    font-family: "Arial";
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 36px;
-    padding-top: 50px;
+    font-size: 1.88rem;
+    line-height: 2.25rem;
+    padding-top: 3%;
 }
 
-.scrinshots {
+#scrinshots {
     display: grid;
-    grid-gap: 28px;
-    padding: 50px 50px 50px 50px;
+    gap: 1.69rem;
+    padding: 3%;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 576px));
     grid-auto-flow: row;
 }
 
 .scrsh {
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
 }
 
 .scrsh img {
-    margin-right: 15px;
+    margin-right: 3%;
 }
 
 .scrsh .textscrblc {
@@ -209,19 +324,14 @@ main {
 
 .scrsh .textscrblc h3 {
     color: #445161;
-    font-family: "Arial";
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 30px;
-    margin-bottom: 12px;
+    font-size: 1.5rem;
+    line-height: 1.88rem;
+    margin-bottom: 3%;
 }
 
 .scrsh .textscrblc p {
     color: #333333;
-    font-family: "Arial";
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
+    line-height: 1.38rem;
 }
 
 .reviewscontainer {
@@ -230,21 +340,18 @@ main {
 
 .reviewscontainer h2 {
     color: #445161;
-    font-family: "Arial";
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 36px;
+    font-size: 1.88rem;
+    line-height: 2.25rem;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 3%;
 }
 
-.reviewsgrid {
+#reviewsgrid {
     display: grid;
-    grid-gap: 24px;
-    padding: 50px 50px 50px 50px;
+    grid-gap: 1.5rem;
+    padding: 3%;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 574px));
     grid-auto-flow: row;
 }
 
@@ -253,15 +360,14 @@ main {
 }
 
 .reviews img {
-    width: 75px;
-    height: 75px;
-    margin-right: 28px;
+    margin-right: 6%;
+    align-self: flex-start;
 }
 
 blockquote {
     background: #ebebeb;
     position: relative;
-    padding: 16px;
+    padding: 3%;
 }
 
 blockquote::before {
@@ -277,19 +383,15 @@ blockquote::before {
 
 blockquote p {
     color: #333333;
-    font-family: "Arial";
     font-style: italic;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
+    font-size: 0.88rem;
+    line-height: 1.13rem;
 }
 
 blockquote footer {
     color: #989898;
-    font-family: "Arial";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
+    font-size: 0.88rem;
+    line-height: 1.13;
 }
 
 .buyitcontainer {
@@ -299,10 +401,10 @@ blockquote footer {
 .buyitcontainer h2 {
     display: flex;
     justify-content: center;
-    margin: 50px 0 30px 0;
+    margin: 2% 0;
 }
 
-.buyitvariants {
+#buyitvariants {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -312,42 +414,37 @@ blockquote footer {
 .standart,
 .premium,
 .lux {
-    width: 300px;
     background: #445162;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 2px solid #445162;
     border-radius: 5px;
-    margin: 0 45px 45px 45px;
+    margin: 3%;
 }
 
 .standart h3,
 .premium h3,
 .lux h3 {
     color: #ffffff;
-    font-family: "Arial";
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.88rem;
     display: flex;
     justify-content: center;
-    margin: 17px 0;
+    margin: 5.5% 0;
 }
 
 .standart h1,
 .premium h1,
 .lux h1 {
     color: #445162;
-    font-family: "Arial";
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 71px;
+    font-size: 2.5rem;
+    line-height: 4.44rem;
     background: white;
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 6%;
 }
 
 .standart ol,
@@ -360,29 +457,35 @@ blockquote footer {
 .premium ol li,
 .lux ol li {
     color: #ffffff;
-    font-family: "Arial";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
+    font-size: 0.88rem;
+    line-height: 1.5rem;
 }
 
 .buybut {
-    width: 260px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     background-color: #ffffff;
-    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid white;
     border-radius: 5px;
     color: #445161;
-    font-family: "Arial";
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 18px;
+    font-size: 1.13rem;
+    line-height: 2.5rem;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.standart a,
+.premium a,
+.lux a {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6.5%;
+
 }
 
 .contform {
@@ -391,28 +494,30 @@ blockquote footer {
 
 .contform h2 {
     color: #ffffff;
-    font-family: "Arial";
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 36px;
+    font-size: 1.88rem;
+    line-height: 2.25rem;
     display: flex;
     justify-content: center;
-    padding: 50px 0 30px 0;
+    padding: 3% 0 2% 0;
     margin: 0;
 }
 
-.formncontlinks {
+#formncontlinks {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: flex-start;
+    padding-bottom: 3%;
 }
+
+
 
 .fieldsetform {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 500px;
+    width: 100%;
 }
 
 .forsubmit {
@@ -423,24 +528,51 @@ blockquote footer {
 
 .fieldsetform input {
     width: 100%;
-    height: 40px;
+/*    height: 40px;*/
+    line-height: 2.5rem;
     background-color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 3%;
     display: flex;
     border: 1px solid white;
     border-radius: 5px;
-    padding-left: 10px;
+    padding-left: 0.63rem;
 }
+
+.fieldsetform input[placeholder="Your name:"] {
+    background-image: url(../img/profile.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 4%;
+    padding-left: 5%;
+
+}
+
+.fieldsetform input[placeholder="Your email:"] {
+    background-image: url(../img/at_sign.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 4%;
+    padding-left: 5%;
+}
+
+.fieldsetform input[placeholder="Your topic:"] {
+    background-image: url(../img/important_message.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 4%;
+    padding-left: 5%;
+}
+
 
 .fieldsetform textarea {
     width: 100%;
-    height: 170px;
+    min-height: 150px;
     background-color: #ffffff;
     margin-bottom: 20px;
     border: 1px solid white;
     border-radius: 5px;
-    padding-left: 10px;
-    padding-top: 13px;
+    padding-left: 5%;
+    padding-top: 3%;
 }
 
 input[type="submit"] {
@@ -452,8 +584,6 @@ input[type="submit"] {
     justify-content: center;
     align-items: center;
     color: #445162;
-    font-family: "Arial";
-    font-size: 16px;
     font-weight: 600;
     line-height: 24px;
     text-transform: uppercase;
@@ -461,44 +591,44 @@ input[type="submit"] {
     border-radius: 5px;
 }
 
+.progress {
+    margin-bottom: 5%;
+}
+
 .contlinks {
     margin-left: 45px;
+    /**width: 32%;**/
+
 }
 
 .contlinks p {
     color: #ffffff;
-    font-family: "Arial";
-    font-size: 16px;
-    font-weight: 400;
     line-height: 24px;
     margin: 0;
 }
 
 .contact {
-    margin-bottom: 29px;
-    width: 240px;
+    margin-bottom: 12%;
+    /**width: 240px;**/
     display: flex;
     align-items: center;
 }
 
 #contact1::before {
     content: url(skype_icon.png);
-    width: 26px;
-    height: 26px;
+    width: 10%;
     margin-right: 5px;
 }
 
 #contact2::before {
     content: url(icq_icon.png);
-    width: 26px;
-    height: 26px;
+    width: 10%;
     margin-right: 5px;
 }
 
 #contact3::before {
     content: url(email_icon.png);
-    width: 26px;
-    height: 26px;
+    width: 10%;
     margin-right: 5px;
 }
 
@@ -514,17 +644,14 @@ input[type="submit"] {
 }
 
 .mainfooter {
-    min-height: 26px;
     background: #f5f5f5;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     color: #445162;
-    font-family: "Arial MT";
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 24px;
+    font-size: 0.75rem;
+    line-height: 1.63rem;
     letter-spacing: 0.3px;
     display: flex;
     justify-content: center;
