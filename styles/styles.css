@@ -33,17 +33,22 @@ body {
     }
 
     #digplus,
-    #scrinshots,
-    #reviewsgrid {
+    #scrinshots {
         grid-template-columns: repeat(auto-fit, 48%);
     }
 
+    #reviewsgrid {
+        grid-template-columns: repeat(auto-fit, 48%);
+        grid-gap: 0.5rem;
+    }
+
+
     .abouttext {
-        width: 52%;
+        width: 52%!important;
     }
 
     .aboutimg {
-        width: 30%;
+        width: 30%!important;
     }
 
     html,
@@ -65,8 +70,61 @@ body {
     form {
         width: 39%;
     }
+
     .headtextlist {
-        max-width: 38%;}
+        max-width: 38%;
+    }
+}
+
+@media (min-width: 769px) and (max-width:1199px) {
+    .container {
+        max-width: 1200px;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    html,
+    body {
+        font-size: 14px;
+        margin: auto;
+    }
+
+    #digplus,
+    #reviewsgrid {
+        grid-template-columns: repeat(auto-fit, 47%);
+    }
+
+    .standart,
+    .premium,
+    .lux {
+        width: 30%;
+        margin: 1% !important;
+    }
+
+    form {
+        width: 50%;
+    }
+
+    .headtextlist {
+        max-width: 46%;
+    }
+
+    .abouttext,
+    .aboutimg {
+        width: 46%;
+        margin: 2% auto !important;
+    }
+     
+
+    blockquote {
+        padding: 1% 3% !important;
+    }
+
+    blockquote::before {
+        width: 15px !important;
+        height: 15px !important;
+        left: -8px !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -74,8 +132,13 @@ body {
         justify-content: center;
     }
 
+    /*
+    #headercont {
+        height: 100vh;
+    }
+*/
     .abouttext {
-        width: 100%;
+        width: 85%;
     }
 
     #digplus,
@@ -101,14 +164,50 @@ body {
     .standart,
     .premium,
     .lux {
-        width: 48%;
+        width: 44%;
     }
 
     form {
         width: 80%;
     }
-        .headtextlist {
-        max-width: 80%;}
+
+    .headtextlist {
+        max-width: 47%;
+    }
+
+    .headtextlist h1 {
+        font-size: 2.9rem !important;
+    }
+
+    .logo {
+        /*        width: 100%!important;*/
+        height: 13.7rem !important;
+    }
+
+    blockquote::before {
+        width: 15px !important;
+        height: 15px !important;
+        left: -8px !important;
+    }
+
+    .contlinks {
+        margin-left: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .contact {
+        margin-bottom: 5% !important;
+    }
+
+    #contact1::before,
+    #contact2::before,
+    #contact3::before,
+    #contact4::before {
+        margin-right: 15px !important;
+    }    
 }
 
 @media (max-width: 576px) {
@@ -117,13 +216,16 @@ body {
     }
 
     .abouttext {
-        width: 100%;
+        width: 85%;
     }
 
     #digplus,
-    #scrinshots,
+    #scrinshots {
+        grid-template-columns: repeat(auto-fit, 87%);
+    }
+
     #reviewsgrid {
-        grid-template-columns: repeat(auto-fit, 100%);
+        grid-template-columns: repeat(auto-fit, 90%);
     }
 
     .aboutimg {
@@ -132,7 +234,7 @@ body {
 
     html,
     body {
-        font-size: 12px;
+        font-size: 14px;
         margin: auto;
     }
 
@@ -143,20 +245,76 @@ body {
     .standart,
     .premium,
     .lux {
-        width: 70%;
+        width: 80%;
+        margin-top: 0 !important;
     }
 
     form {
         width: 80%;
     }
-        .headtextlist {
-        max-width: 80%;}
+
+    .headtextlist {
+        max-width: 80% !important;
+        align-items: center;
+    }
+
+    .headtextlist h1 {
+        text-align: center;
+    }
+
+    .logo {
+        width: 100% !important;
+        height: 13.7rem !important;
+    }
+
+    .scrsh {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .scrsh img {
+        padding-bottom: 6%;
+        margin-right: 0 !important;
+    }
+
+    blockquote::before {
+        content: "";
+        width: 0 !important;
+    }
+
+    .reviews img {
+        margin-right: 2% !important;
+    }
+
+    .contlinks {
+        margin-left: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .contact {
+        margin-bottom: 5% !important;
+    }
+
+    #contact1::before,
+    #contact2::before,
+    #contact3::before,
+    #contact4::before {
+        margin-right: 15px !important;
+    }
+
 }
+
+
+/*Медиазапросы выше*/
 
 .container {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 header {
@@ -168,8 +326,8 @@ header {
 
 
 .headtextlist {
-/*    max-width: 458px;*/
-/*    max-width: 38%;*/
+    /*    max-width: 458px;*/
+    /*    max-width: 38%;*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -180,15 +338,15 @@ header {
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
     color: #ffffff;
     font-size: 3.75rem;
-    line-height: 45px;
-    margin: 0 0 50px 0;
+    line-height: 2.8rem;
+    margin: 0 0 12% 0;
 }
 
 .headtextlist ul {
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
     color: #ffffff;
     font-size: 1.25rem;
-    line-height: 36px;
+    line-height: 2.25rem;
     list-style-type: none;
     list-style-image: url(check_icon.png);
     padding-left: 30px;
@@ -196,8 +354,8 @@ header {
 
 .logo {
     background-color: #ffffff;
-    width: 469px;
-    height: 214px;
+    width: 37%;
+    height: 59%;
     margin: 4%;
     background-image: url(../img/trex.png);
     background-size: contain;
@@ -212,13 +370,14 @@ main {
 .abouttext h2 {
     color: #445161;
     font-size: 1.88rem;
-    line-height: 36px;
-    margin-bottom: 30px;
+    line-height: 2.25rem;
+    /*    margin-bottom: 30px;*/
+    margin-bottom: 3%;
 }
 
 .abouttext p {
     color: #333333;
-    line-height: 24px;
+    line-height: 1.5rem;
     text-align: justify;
 }
 
@@ -511,7 +670,7 @@ blockquote footer {
 
 #formncontlinks {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: flex-start;
     padding-bottom: 3%;
@@ -535,7 +694,7 @@ blockquote footer {
 
 .fieldsetform input {
     width: 100%;
-/*    height: 40px;*/
+    /*    height: 40px;*/
     line-height: 2.5rem;
     background-color: #ffffff;
     margin-bottom: 3%;
@@ -548,26 +707,26 @@ blockquote footer {
 .fieldsetform input[placeholder="Your name:"] {
     background-image: url(../img/profile.png);
     background-repeat: no-repeat;
-    background-position: center left;
+    background-position: center left 1%;
     background-size: 4%;
-    padding-left: 5%;
+    padding-left: 6%;
 
 }
 
 .fieldsetform input[placeholder="Your email:"] {
     background-image: url(../img/at_sign.png);
     background-repeat: no-repeat;
-    background-position: center left;
+    background-position: center left 1%;
     background-size: 4%;
-    padding-left: 5%;
+    padding-left: 6%;
 }
 
 .fieldsetform input[placeholder="Your topic:"] {
     background-image: url(../img/important_message.png);
     background-repeat: no-repeat;
-    background-position: center left;
+    background-position: center left 1%;
     background-size: 4%;
-    padding-left: 5%;
+    padding-left: 6%;
 }
 
 
@@ -578,7 +737,7 @@ blockquote footer {
     margin-bottom: 20px;
     border: 1px solid white;
     border-radius: 5px;
-    padding-left: 5%;
+    padding-left: 6%;
     padding-top: 3%;
 }
 
@@ -603,8 +762,8 @@ input[type="submit"] {
 }
 
 .contlinks {
-    margin-left: 45px;
-    /**width: 32%;**/
+
+    /*    width: 32%;*/
 
 }
 
@@ -623,25 +782,25 @@ input[type="submit"] {
 
 #contact1::before {
     content: url(skype_icon.png);
-    width: 10%;
+    width: 22px;
     margin-right: 5px;
 }
 
 #contact2::before {
     content: url(icq_icon.png);
-    width: 10%;
+    width: 22px;
     margin-right: 5px;
 }
 
 #contact3::before {
     content: url(email_icon.png);
-    width: 10%;
+    width: 22px;
     margin-right: 5px;
 }
 
 #contact4::before {
     content: url(phone_icon.png);
-    width: 10%;
+    width: 22px;
     margin-right: 5px;
 }
 
